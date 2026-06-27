@@ -40,14 +40,45 @@ _As a user, I want to sign out of my account using an option in the menu, so tha
 
 **user stories for the profile page**
 1. **View personal information**
-As a user, I want to view my saved name, username, age, and country on my profile page, so that I can see the details I provided during registration.
+_As a user, I want to view my saved name, username, age, and country on my profile page, so that I can see the details I provided during registration._
 
 2. **Edit personal information**
-As a user, I want to update my name, username, age, and country on my profile page, so that I can keep my information up to date.
+_As a user, I want to update my name, username, age, and country on my profile page, so that I can keep my information up to date._
 
 3. **Save updated information**
-As a user, I want the changes I make to my profile to be saved, so that my updated details are stored and reflected throughout the app.
+_As a user, I want the changes I make to my profile to be saved, so that my updated details are stored and reflected throughout the app._
 
 4. **Update name in header**
-As a user, I want my updated name to be displayed in the app's header after I change it in the profile, so that my changes are immediately visible.
+_As a user, I want my updated name to be displayed in the app's header after I change it in the profile, so that my changes are immediately visible._
 
+**user stories for the habits page**
+1.**Add a new habit**
+_As a user, I want to add new habits on the details configuration page so that I can manage and update my habits as needed._
+
+2. **Delete a habit**
+_As a user, I want to delete existing habits so that I can keep my habits up to date.
+_
+3. **Personalize a habit with color**
+_As a user, I want to assign a specific color to each habit to make it personal to me._
+
+**Write user stories for the reports page**
+1. **View weekly reports**
+_As a user, I want to see a report of my weekly habit progress so that I can understand how well I am maintaining my habits._
+
+2. **Visualize completed habits**
+_As a user, I want to see a chart of my completed habits for each day of the week so that I can quickly identify trends in my progress._
+
+3. **View all habits**
+_As a user, I want to see both completed and incomplete habits in my report so that I have a comprehensive view of my habit tracking performance._
+
+**user stories for the notifications page**
+1. **Enable/disable notifications**
+_As a user, I want to be able to enable or disable notifications for the app, so that I can choose whether or not to receive reminders for my habits._
+
+2. **Add habits for notifications**
+_As a user, I want to select specific habits to receive notifications for, so that I only get reminders for the habits I am actively working on._
+
+3. **Set notification times**
+_As a user, I want to have the option to receive notifications three times a day (morning, afternoon, evening) for all selected habits, so that I get timely reminders throughout the day to complete my habits._
+
+**new labels and user stories**
