@@ -17,19 +17,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final String defaultUsername = 'testuser';
   final String defaultPassword = 'password123';
 
-    bool validateForm() {
-    // create logic to validate form
-    Future<void> authenticateUser() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    // create rest of the logic
-    }
-
-void handleLogin() {
-  if (validateForm()) {
-    authenticateUser();
-  }
-}
-
   void _login() {
     // The login logic goes here
     print("login logic here");
@@ -154,31 +141,6 @@ void handleLogin() {
                   child: const Text(
                     'Sign up',
                     style: TextStyle(color: Colors.white, fontSize: 16),
-                    Column(
-                        children: [
-                            TextField(
-                            controller: emailController,
-                            decoration: InputDecoration(labelText: 'Enter your email'),
-                            keyboardType: TextInputType.emailAddress,
-                            ),
-                            TextField(
-                            controller: passwordController,
-                            decoration: InputDecoration(labelText: 'Enter your password'),
-                            obscureText: true,
-                            ),
-                            SizedBox(height: 20),
-                            ElevatedButton(
-                            onPressed: handleLogin,
-                            child: Text('Login'),
-                            ),
-                            TextButton(
-                            onPressed: () {
-                                Navigator.pushNamed(context, '/signup');
-                            },
-                            child: Text("Don't have an account? Sign Up"),
-                            ),
-                        ],
-                        );
                   ),
                 ),
               ],
@@ -188,4 +150,20 @@ void handleLogin() {
       ),
     );
   }
+
+  Future<void> saveUserData() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+    // create logic to get details
+    }
+
+    Future<void> authenticateUser() async {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+    // create rest of the logic
+    }
+    void handleLogin() {
+      if (validateForm()) {
+        authenticateUser();
+      }
+}
+
 }
