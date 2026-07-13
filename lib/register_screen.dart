@@ -158,7 +158,7 @@ await prefs.setString('selectedHabitsMap', jsonEncode(selectedHabitsMap));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => HabitTrackerScreen(username: username),
+        builder: (context) => AddHabitScreen(), //HabitTrackerScreen(username: username),
       ),
     );
   }
