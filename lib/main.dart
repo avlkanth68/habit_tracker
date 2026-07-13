@@ -14,4 +14,11 @@ class HabitTrackerApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
     );
   }
+    Navigator.push(
+    context,
+    MaterialPageRoute(
+        builder: (context) => DetailScreen(item: selectedItem),
+    ),
+    );
+
 }
