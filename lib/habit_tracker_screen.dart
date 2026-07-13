@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'add_habit_screen.dart';
+import 'dart:convert';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HabitTrackerScreen extends StatefulWidget {
   final String username;
@@ -222,3 +225,39 @@ class _HabitTrackerScreenState extends State<HabitTrackerScreen> {
   }
 }
 
+// country_list.dart
+
+Future<List<String>> fetchCountries() async {
+  List<String> countries = [
+    'United States',
+    'Canada',
+    'United Kingdom',
+    'Australia',
+    'India',
+    'Germany',
+    'France',
+    'Japan',
+    'China',
+    'Brazil',
+    'South Africa'
+  ];
+
+  return countries;
+}
+
+Future<void> _loadUserData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      name = prefs.getString('name') ?? widget.username;
+      selectedHabitsMap = Map<String, String>.from(
+          jsonDecode(prefs.getString('selectedHabitsMap') ?? '{}'));
+      completedHabitsMap = Map<String, String>.from(
+          jsonDecode(prefs.getString('completedHabitsMap') ?? '{}'));
+    });
+  }
+
+Future<void> _saveHabits() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('selectedHabitsMap', jsonEncode(selectedHabitsMap));
+    await prefs.setString('completedHabitsMap', jsonEncode(completedHabitsMap));
+  }
